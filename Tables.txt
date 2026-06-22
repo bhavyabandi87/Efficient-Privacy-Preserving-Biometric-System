@@ -1,0 +1,115 @@
+create database Bio_Indentification;
+
+use Bio_Indentification;
+
+CREATE TABLE `attacker` (
+  `id` text,
+  `attacker` text,
+  `title` text,
+  `name` text,
+  `cont` text,
+  `mac` text,
+  `dt` text,
+  `type` text
+);
+
+CREATE TABLE `comment` (
+  `id` int(11) default NULL,
+  `consumer` text,
+  `title` text,
+  `name` text,
+  `comment` text,
+  `dt` text
+);
+
+CREATE TABLE `consumer` (
+  `id` int(11) NOT NULL auto_increment,
+  `username` varchar(45) default NULL,
+  `password` varchar(45) default NULL,
+  `email` varchar(45) default NULL,
+  `mobile` varchar(45) default NULL,
+  `address` text,
+  `dob` varchar(45) default NULL,
+  `gender` varchar(45) default NULL,
+  `pincode` varchar(45) default NULL,
+  `status` varchar(45) default NULL,
+  `image` longblob,
+  PRIMARY KEY  (`id`)
+);
+
+CREATE TABLE `matadata` (
+  `id` int(11) NOT NULL auto_increment,
+  `owner` varchar(45) default NULL,
+  `title` varchar(45) default NULL,
+  `name` varchar(45) default NULL,
+  `digitalsign` varchar(45) default NULL,
+  PRIMARY KEY  (`id`)
+);
+
+CREATE TABLE `owner` (
+  `id` int(11) NOT NULL auto_increment,
+  `username` varchar(45) default NULL,
+  `password` varchar(45) default NULL,
+  `email` varchar(45) default NULL,
+  `mobile` varchar(45) default NULL,
+  `address` varchar(45) default NULL,
+  `dob` varchar(45) default NULL,
+  `gender` varchar(45) default NULL,
+  `pincode` varchar(45) default NULL,
+  `status` varchar(45) default NULL,
+  `image` longblob,
+  PRIMARY KEY  (`id`)
+);
+
+CREATE TABLE `ownerimages` (
+  `id` int(11) NOT NULL auto_increment,
+  `title` varchar(45) default NULL,
+  `name` varchar(45) default NULL,
+  `owner` varchar(45) default NULL,
+  `description` text,
+  `digitalsign` text,
+  `sk` varchar(45) default NULL,
+  `dt` varchar(45) default NULL,
+  `image` longblob,
+  `rank` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+);
+
+CREATE TABLE `search` (
+  `id` int(11) NOT NULL auto_increment,
+  `consumer` text,
+  `keyword` text,
+  `dt` text,
+  PRIMARY KEY  (`id`)
+);
+
+CREATE TABLE `server` (
+  `username` varchar(50) default NULL,
+  `password` varchar(50) default NULL
+);
+
+INSERT INTO `server` VALUES ('Cloud','Cloud');
+
+CREATE TABLE `serverimages` (
+  `id` int(11) NOT NULL auto_increment,
+  `title` varchar(45) default NULL,
+  `name` varchar(45) default NULL,
+  `owner` varchar(45) default NULL,
+  `description` text,
+  `digitalsign` text,
+  `sk` varchar(45) default NULL,
+  `dt` varchar(45) default NULL,
+  `rank` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+);
+
+CREATE TABLE `transaction` (
+  `id` int(11) NOT NULL auto_increment,
+  `user` text,
+  `name` text,
+  `sk` text,
+  `task` text,
+  `dt` text,
+  PRIMARY KEY  (`id`)
+);
+
