@@ -1,0 +1,51 @@
+
+Cloud Server
+
+
+View All Owner and authorize
+
+View All Users  and authorize
+
+View all Biometric image Files
+
+View all Bio image comments
+
+View all attackers
+
+View all Transactions
+
+View all Consumer Search History
+
+
+
+
+
+
+Owner
+
+
+My Profile
+
+Upload Bio Image
+
+List All Uploaded Bio Image
+
+Verify Owner Bio Image Files
+
+Comments on My Bio Images
+
+My Bio ImageFiles Transaction
+
+
+
+
+User
+
+
+My Profile
+
+Search Biometric Image Files
+
+Download BiometricImage Files
+
+My Search History
